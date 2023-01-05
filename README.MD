@@ -35,7 +35,7 @@
 ## 安装
 
 ```
-git clone https://github.com/moshang-xc/lottery.git
+git clone https://github.com/acheng-floyd/lottery.git
 
 cd lottery
 
