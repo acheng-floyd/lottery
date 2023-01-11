@@ -258,9 +258,16 @@ function bindEvent() {
         break;
       // 抽奖
       case "lottery":
-        setLotteryStatus(true);
+        if (currentPrizeIndex === 0){
+          setLotteryStatus();
+          changePrize();
+          resetCard();
+          break;
+        } else {
+          setLotteryStatus(true);
+        }
         // 每次抽奖前先保存上一次的抽奖数据
-        saveData();
+        //saveData();
         //更新剩余抽奖数目的数据显示
         changePrize();
         resetCard().then(res => {
@@ -287,14 +294,14 @@ function bindEvent() {
         break;
       // 导出抽奖结果
       case "save":
-        saveData().then(res => {
+        //saveData().then(res => {
           resetCard().then(res => {
             // 将之前的记录置空
             currentLuckys = [];
           });
           exportData();
           addQipao(`数据已保存到EXCEL中。`);
-        });
+        //});
         break;
     }
   });
@@ -552,6 +559,12 @@ function selectCard(duration = 600) {
     .onComplete(() => {
       // 动画结束后可以操作
       setLotteryStatus();
+      // 每次抽奖后保存上一次的抽奖数据
+      saveData();
+      //console.log("test");
+      if (currentPrizeIndex === 0){
+        btns.lottery.innerHTML="抽奖结束";
+      }
     });
 }
 
@@ -617,6 +630,7 @@ function lottery() {
   //   return;
   // }
   btns.lottery.innerHTML = "结束抽奖";
+
   rotateBall().then(() => {
     // 将之前的记录置空
     currentLuckys = [];
@@ -632,6 +646,11 @@ function lottery() {
       basicData.leftUsers = basicData.users.slice();
       leftCount = basicData.leftUsers.length;
     }
+
+    /*if (leftPrizeCount === 0) {
+      btns.lottery.innerHTML = "抽奖结束";
+      return true;
+    }*/
 
     for (let i = 0; i < perCount; i++) {
       let luckyId = random(leftCount);
