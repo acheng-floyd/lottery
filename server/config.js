@@ -17,50 +17,50 @@ const prizes = [
     type: 1,
     count: 2,
     text: "特等奖",
-    title: "雷克萨斯460汽车",
-    img: "../img/lexus460.jpg"
+    title: "iPhone 15 pro max 256gb",
+    img: "../img/2024iphone15-promax2.jpeg"
   },
   {
     type: 2,
     count: 10,
     text: "一等奖",
-    title: "苹果14Promax",
-    img: "../img/iphone14promax.jpg"
+    title: "iPhone 15 pro 256gb",
+    img: "../img/2024iphone15-pro.jpeg"
   },
   {
     type: 3,
     count: 15,
     text: "二等奖",
-    title: "苹果14Pro",
-    img: "../img/iphone14pro.jpg"
+    title: "iPhone 15 plus 256gb",
+    img: "../img/2024iphone15-plus.jpeg"
   },
   {
     type: 4,
     count: 20,
     text: "三等奖",
-    title: "苹果14",
-    img: "../img/iphone14.jpg"
+    title: "华为 p60 pro",
+    img: "../img/2024huawei-p60-pro2.jpg"
   },
   {
     type: 5,
     count: 25,
     text: "四等奖",
-    title: "海蓝之谜护肤套装",
-    img: "../img/hailan.jpg"
+    title: "ipad 64gb wifi+插卡版",
+    img: "../img/2024ipad3.jpg"
   },
   {
     type: 6,
     count: 30,
     text: "五等奖",
-    title: "苹果蓝牙耳机",
-    img: "../img/edifier.jpg"
+    title: "蓝牙耳机",
+    img: "../img/2024aipods2.jpg"
   },
   {
     type: 7,
     count: 50,
-    text: "六等奖",
+    text: "幸运奖",
     title: "幸运红包",
-    img: "../img/hongbao.jpg"
+    img: "../img/2024hongbao3.jpg"
   }
 ];
 
