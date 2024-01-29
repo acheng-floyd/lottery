@@ -15,7 +15,7 @@ const prizes = [
   },
   {
     type: 1,
-    count: 2,
+    count: 5,
     text: "特等奖",
     title: "iPhone 15 pro max 256gb",
     img: "../img/2024iphone15-promax2.jpeg"
